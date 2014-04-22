@@ -26,6 +26,13 @@ Approach
 
 6.  Nodes that cannot see the `leader` set their `local quota` to `0`.
 
+Eventual consistency
+--------------------
+
+Synchronization of the `shared quota` is eventually consistent. Todo: determine consistency SLA. Consider first seed node,
+timeouts from failure-detector, and perhaps latency between receiving CRDT payloads? The latter may be covered by
+failure-detector.
+
 [akka-cluster-theory]: http://doc.akka.io/docs/akka/snapshot/common/cluster.html#cluster "Akka Clustering Theory"
 [akka-cluster]: http://doc.akka.io/docs/akka/snapshot/scala/cluster-usage.html "Akka Cluster"
 
